@@ -2,16 +2,24 @@
 
 /*
 Plugin Name: WC To GF Integration
-Plugin URI: http://URI_Of_Page_Describing_Plugin_and_Updates
-Description: A brief description of the Plugin.
+Plugin URI:
+Description: Snippets that facilitate integration between WooCommerce and GravityForms
 Version: 1.0
 Author: jason
-Author URI: http://URI_Of_The_Plugin_Author
-License: A "Slug" license name e.g. GPL2
+Author URI:
+License: GPL2
 */
 
+/**
+ * Provides capability to use session variables as merge tags in
+ * GravityForms
+ */
 include dirname(__FILE__) . '/incl/gravityforms-extended-merge-tags.php';
 
+
+/**
+ * Create session if one hason't already been started
+ */
 function wcgf_start_session () {
 	if(!session_id()) {
 		session_start();
@@ -20,6 +28,15 @@ function wcgf_start_session () {
 
 add_action('init', 'wcgf_start_session', 1);
 
+/**
+ * Pull order data and store in session
+ *
+ * Stores billing data in session variables immediately after the
+ * payment has been completed and before the $_REQUEST data is unset.
+ *
+ * @param $order_id
+ *
+ */
 function wpgf_pull_billing_data ( $order_id ) {
 	$_SESSION['wcgf_email'] = $_REQUEST['billing_email'];
 	$_SESSION['wcgf_firstname'] = $_REQUEST['billing_first_name'];
