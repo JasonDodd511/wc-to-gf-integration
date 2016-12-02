@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpProjectServersManager">
+    <servers>
+      <server host="http://159.203.28.68/" id="e000bc2d-18f9-43b7-a8e8-6de2361a0504" name="Dev-01" use_path_mappings="true">
+        <path_mappings>
+          <mapping local-root="$PROJECT_DIR$" remote-root="/srv/users/serverpilot/apps/dev-instance-01/public/wp-content/plugins/wc-to-gf-integration" />
+        </path_mappings>
+      </server>
+    </servers>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7" />
+</project>
