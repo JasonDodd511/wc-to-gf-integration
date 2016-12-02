@@ -4,7 +4,7 @@
 Plugin Name: WC To GF Integration
 Plugin URI: https://github.com/JasonDodd511/wc-to-gf-integration
 Description: Snippets that facilitate integration between WooCommerce and GravityForms
-Version: 1.0.1
+Version: 1.0.2
 Author: Jason Dodd
 Author URI:
 License: GPL2
