@@ -4,7 +4,7 @@
 Plugin Name: WC To GF Integration
 Plugin URI: https://github.com/JasonDodd511/wc-to-gf-integration
 Description: Snippets that facilitate integration between WooCommerce and GravityForms
-Version: 1.0.2
+Version: 1.0.3
 Author: Jason Dodd
 Author URI:
 License: GPL2
@@ -43,7 +43,7 @@ add_action('init', 'wcgf_start_session', 1);
 function wpgf_pull_billing_data ( $order_id ) {
 	$_SESSION['wcgf_email'] = $_REQUEST['billing_email'];
 	$_SESSION['wcgf_firstname'] = $_REQUEST['billing_first_name'];
-	$_SESSION['order_id'] = $order_id;
+	$_SESSION['wcgf_orderid'] = $order_id;
 }
 
 add_action( 'woocommerce_pre_payment_complete', 'wpgf_pull_billing_data', 10, 1);
